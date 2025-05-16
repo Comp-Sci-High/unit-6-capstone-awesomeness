@@ -14,18 +14,40 @@ app.use((req, res, next) => {
     next();
 });
 
-const questionSchema = new mongoose.Schema(
+const mcquestionSchema = new mongoose.Schema(
     {
-        name : {type: String, },
-        question: {type: String, Unique: "true"},
-        image: {type: String, Unique: "true"},
-        questionA: {type: String, Unique: "true"},
-        questionB: {type: String, Unique: "true"},
-        questionC: {type: String, Unique: "true"},
-        questionD: {type: String, Unique: "true"},
-        Correctquestion: {type: String, Unique: "true"}
+        name : {type: String, Unique: true, require: true},
+        question: {type: String, require: true},
+        image: {type: String, Unique: true},
+        questionA: {type: String, require: true},
+        questionB: {type: String, require: true},
+        questionC: {type: String, require: true},
+        questionD: {type: String, require: true},
+        Correctquestion: {type: String, require: true}
     }
 )  
+
+const shortessaySchema = new mongoose.Schema(
+    {
+        name : {type: String, require: true},
+        question: {type: String, require: true},
+        image: {type: String},
+        guide: {type: String}
+    }
+) 
+
+// app.get("/multiplehoice", async (req,res) =>{
+//    const mcquestion = await mcquestion.find{mcquestion}
+// })
+
+// app.get("/shortessay", async (req,res) =>{
+//    const sequestion = await question.find{mcquestion}
+// })
+
+// app.get("/essay", async (req,res) =>{
+//    const mcquestion = await question.find{mcquestion}
+// })
+
 
 
 async function startServer() {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Regents Prep</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Practice</a></li>
+        </ul>
+      </nav>
+      <h1>Global Regents Prep</h1>
+      <p>Historical knowledge for a better tomorrow.</p>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Welcome</h2>
+        <p>This site is designed to help students review key concepts in world history and prepare for the Global Regents Exam. Explore resources and practice with multiple choice, short response, and essay questions.</p>
+      </section>
+
+      <section class="feature-cards">
+        <div class="card">
+          <a href="multiple-choice.html">
+            <h3>Multiple Choice</h3>
+            <p>Click here to start practicing multiple choice questions.</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="short-response.html">
+            <h3>Short Response</h3>
+            <p>Click here to start practicing short response questions.</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="essay.html">
+            <h3>Essay</h3>
+            <p>Click here to start practicing essay questions.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Teacher Question Board -->
+      <section class="teacher-post">
+        <h2>Teacher's Question Board</h2>
+        <form id="questionForm">
+          <textarea id="questionInput" placeholder="Type your question here..." required></textarea>
+          <button type="submit">Post Question</button>
+        </form>
+        <ul id="questionList"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Regents Prep | Designed for Educational Excellence</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
