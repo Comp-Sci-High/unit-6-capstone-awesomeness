@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Question Submission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Post a New Regents Question</h1>
+  </header>
+
+  <div class="container">
+    <form id="question-form" method="POST" action="/submit-question">
+      <label for="type"><strong>Question Type:</strong></label>
+      <select name="type" id="type" required>
+        <option value="multiple">Multiple Choice</option>
+        <option value="short">Short Response</option>
+        <option value="essay">Essay</option>
+      </select>
+
+      <label for="text"><strong>Question Text:</strong></label>
+      <textarea name="text" id="text" rows="4" required></textarea>
+
+      <div id="choices-container" style="display: none;">
+        <label><strong>Choices:</strong></label>
+        <input type="text" name="choiceA" placeholder="Choice A"><br>
+        <input type="text" name="choiceB" placeholder="Choice B"><br>
+        <input type="text" name="choiceC" placeholder="Choice C"><br>
+        <input type="text" name="choiceD" placeholder="Choice D"><br>
+
+        <label for="correct"><strong>Correct Answer:</strong></label>
+        <select name="correct" id="correct">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+      </div>
+
+
+       <footer>
+    &copy; 2025 Regents Prep. For teacher use only.
+  </footer>
+  
+      </body>
+</html>

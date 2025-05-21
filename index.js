@@ -48,7 +48,8 @@ const shortessaySchema = new mongoose.Schema(
 //    const mcquestion = await question.find{mcquestion}
 // })
 
-
+// app.post("/teacher", async (req, res) =>{
+//     const post = question.// })
 
 async function startServer() {
     await mongoose.connect("mongodb+srv://SE12:CSH2025@cluster0.3rbns.mongodb.net/monica?retryWrites=true&w=majority&appName=Cluster0");
